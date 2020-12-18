@@ -1,1 +1,15 @@
-Hello
+<h1>予約一覧</h1>
+<table>
+  <thead>
+    <td>No.</td>
+    <td>予約者名</td>
+    <td>内容</td>
+  </thead>
+  <% @reservations.each do |reservation| %>
+    <tbody>
+      <td><%= reservation.id %></td>
+      <td><%= reservation.user_name %></td>
+      <td><%= reservation.menu_name %></td>
+    </tbody>
+  <% end %>
+</table>

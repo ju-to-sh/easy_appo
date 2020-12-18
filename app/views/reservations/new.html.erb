@@ -1,0 +1,6 @@
+<h1>予約登録画面</h1>
+<%= form_with model: @reservation, local:true do |f| %>
+  <p>予約者名：<%= f.text_field :user_name %></p>
+  <p>予約内容：<%= f.text_field :menu_name %></p>
+  <%= f.submit "登録" %>
+<% end %>
