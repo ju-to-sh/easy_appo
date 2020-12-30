@@ -1,5 +1,5 @@
 class Reservation < ApplicationRecord
-  validates :user_name, :time, :menu_name, presence: true
-  # validate :time,
-  validates :menu_name, length: { maximum: 100 }
+  validates :user_name, presence: true
+  validates :time, presence: true
+  validates :menu_name, length: { maximum: 100 }, presence: true
 end
