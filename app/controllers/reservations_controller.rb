@@ -8,7 +8,7 @@ class ReservationsController < ApplicationController
   end
 
   def create
-    @reservation = Reservation.create!(reservation_params)
+    @reservation = Reservation.new(reservation_params)
     if @reservation.save
       redirect_to root_path, notice: "予約を登録しました"
     else
@@ -20,6 +20,6 @@ class ReservationsController < ApplicationController
   private
 
   def reservation_params
-    params.require(:reservation).permit(:user_name, :menu_name)
+    params.require(:reservation).permit(:user_name, :time, :menu_name)
   end
 end
