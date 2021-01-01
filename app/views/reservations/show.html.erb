@@ -1,0 +1,15 @@
+<h1>予約詳細</h1>
+<table>
+  <thead>
+    <td>No.</td>
+    <td>予約者名</td>
+    <td>予約日時</td>
+    <td>内容</td>
+  </thead>
+  <tbody>
+    <td><%= @reservation.id %></td>
+    <td><%= @reservation.user_name %></td>
+    <td><%= @reservation.time.to_s(:datetime_jp) %></td>
+    <td><%= @reservation.menu_name %></td>
+  </tbody>
+</table>
