@@ -1,6 +1,6 @@
 class ReservationsController < ApplicationController
   def index
-    @reservations = Reservation.all
+    @reservations = Reservation.order(id: :asc)
   end
 
   def new
@@ -23,7 +23,7 @@ class ReservationsController < ApplicationController
 
   def update
     reservation = Reservation.find(params[:id])
-    reservation.update(reservation_params)
+    reservation.update!(reservation_params)
     redirect_to root_path, notice: "予約を更新しました"
   end
 

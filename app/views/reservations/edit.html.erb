@@ -1,8 +1,8 @@
-<h1>予約更新画面</h1>
+<h1>予約変更画面</h1>
 <%= render "layouts/error_messages" %>
 <%= form_with model: @reservation, method: :patch, local:true do |f| %>
   <p><%= f.label :user_name %>：<%= f.text_field :user_name %></p>
   <p><%= f.label :time %>：<%= f.text_field :time %></p>
   <p><%= f.label :menu_name %>：<%= f.text_field :menu_name %></p>
-  <%= f.submit "更新" %>
+  <%= f.submit "変更" %>
 <% end %>

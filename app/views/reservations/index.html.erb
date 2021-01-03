@@ -10,6 +10,9 @@
       <td><%= reservation.id %></td>
       <td><%= reservation.user_name %></td>
       <td><%= reservation.menu_name %></td>
+      <td><%= link_to "詳細", reservation, class: "btn btn-primary" %></td>
+      <td><%= link_to "変更", edit_reservation_path(reservation), class: "btn btn-success" %></td>
+      <td><%= link_to "削除", reservation, method: :delete, data: {confirm: "削除しましすか？"}, class: "btn btn-danger" %></td>
     </tbody>
   <% end %>
 </table>
