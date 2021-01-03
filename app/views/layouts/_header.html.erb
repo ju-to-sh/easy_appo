@@ -1,0 +1,22 @@
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary pr-5 pl-5">
+    <%= link_to "Easy_appo", root_path, class: "navbar-brand" %>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_toggle" aria-controls="navbar_toggle" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbar_toggle">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <%= link_to "予約登録", new_reservation_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "ログイン", "#", class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "ログアウト", "#", class: "nav-link" %>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
